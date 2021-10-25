@@ -10,6 +10,8 @@ cd transcribe-videos
 npm install
 ```
 
+Set your `DG_KEY` environment variable or replace `process.env.DG_KEY` with your key.
+
 ## Usage
 
 Uncomment either the `transcribeLocalVideo()` or `transcribeRemoveVideo()` calls at the top of `index.js` and run with:
