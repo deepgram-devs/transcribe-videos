@@ -1,6 +1,6 @@
 # Transcribe Videos with Node.js
 
-This is a barebones project which transcribes either local or remote video files with [Deepgram](http://deepgram.com)'s AI Speech Recognition API.
+This is a barebones project which transcribes either local or remote video files with [Deepgram](http://deepgram.com)'s AI Speech Recognition API. This project accompanies a blog post available at <https://developers.deepgram.com/blog/2021/11/transcribe-videos-nodejs/>
 
 ## Setup
 
