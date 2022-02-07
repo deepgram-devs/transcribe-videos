@@ -10,7 +10,7 @@ const deepgram = new Deepgram(process.env.DG_KEY);
 // transcribeRemoteVideo('https://rawcdn.githack.com/deepgram-devs/transcribe-videos/62fc7769d6e2bf38e420ee5224060922af4546f7/deepgram.mp4');
 
 async function transcribeLocalVideo(filePath) {
-	cmd(ffmpeg, `-hide_banner -y -i ${filePath} ${filePath}.wav`);
+	ffmpeg(`-hide_banner -y -i ${filePath} ${filePath}.wav`);
 	const audioFile = { buffer: fs.readFileSync(`${filePath}.wav`), mimetype: 'audio/wav' };
 	const response = await deepgram.transcription.preRecorded(audioFile, { punctuation: true });
 	return response.results;
