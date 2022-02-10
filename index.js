@@ -13,12 +13,12 @@ async function transcribeLocalVideo(filePath) {
 	ffmpeg(`-hide_banner -y -i ${filePath} ${filePath}.wav`);
 	const audioFile = { buffer: fs.readFileSync(`${filePath}.wav`), mimetype: 'audio/wav' };
 	const response = await deepgram.transcription.preRecorded(audioFile, { punctuation: true });
-	return response.results;
+	console.dir(response.results, {depth: null})
 }
 
 async function transcribeRemoteVideo(url) {
 	const filePath = await downloadFile(url);
-	const transcript = await transcribeLocalVideo(filePath);
+	await transcribeLocalVideo(filePath);
 }
 
 async function downloadFile(url) {
