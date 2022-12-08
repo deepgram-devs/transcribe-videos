@@ -14,7 +14,7 @@ Set your `DG_KEY` environment variable or replace `process.env.DG_KEY` with your
 
 ## Usage
 
-Uncomment either the `transcribeLocalVideo()` or `transcribeRemoveVideo()` calls at the top of `index.js` and run with:
+Uncomment either the `transcribeLocalVideo()` or `transcribeRemoteVideo()` calls at the top of `index.js` and run with:
 
 ```
 node index.js
